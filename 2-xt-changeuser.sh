@@ -1,4 +1,6 @@
 #!/bin/sh
-sudo chown -R ec2-user:ec2-user /var/lib/jenkins 
-sudo chown -R ec2-user:ec2-user /var/cache/jenkins
-sudo chown -R ec2-user:ec2-user /var/log/jenkins
+sudo chown -R jenkins:jenkins /var/lib/jenkins 
+sudo chown -R jenkins:jenkins /var/cache/jenkins
+sudo chown -R jenkins:jenkins /var/log/jenkins
+export JENKINS_USER="jenkins"
+sudo service jenkins restart
